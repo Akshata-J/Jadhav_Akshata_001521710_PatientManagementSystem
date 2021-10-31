@@ -206,7 +206,7 @@ public class MainJFrame extends javax.swing.JFrame {
         Encounter e = null;
         try {
             
-            p = new Person("AK is dumb","10/10/1995","Female","A-","dum@gmail.com",9999999999L,183,80,46,"Boylston","Boston",2215);
+            p = new Person("SH","10/10/1995","Male","A-","srh@gmail.com",9999999999L,183,80,46,"Boylston","Boston",2215);
             system.addPerson(p);
             
             

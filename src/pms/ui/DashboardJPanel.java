@@ -144,13 +144,14 @@ public class DashboardJPanel extends javax.swing.JPanel {
         personBased = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         personTable = new javax.swing.JTable();
+        jLabel27 = new javax.swing.JLabel();
         personBasedButton = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(700, 590));
 
         patientBasedButton.setBackground(new java.awt.Color(255, 255, 255));
-        patientBasedButton.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
+        patientBasedButton.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         patientBasedButton.setText("Patient");
         patientBasedButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         patientBasedButton.addActionListener(new java.awt.event.ActionListener() {
@@ -160,7 +161,7 @@ public class DashboardJPanel extends javax.swing.JPanel {
         });
 
         communityBasedButton.setBackground(new java.awt.Color(255, 255, 255));
-        communityBasedButton.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
+        communityBasedButton.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         communityBasedButton.setText("Community");
         communityBasedButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         communityBasedButton.addActionListener(new java.awt.event.ActionListener() {
@@ -170,7 +171,7 @@ public class DashboardJPanel extends javax.swing.JPanel {
         });
 
         mainMenuBtn.setBackground(new java.awt.Color(255, 255, 255));
-        mainMenuBtn.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
+        mainMenuBtn.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         mainMenuBtn.setText("Main Menu");
         mainMenuBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         mainMenuBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -212,6 +213,7 @@ public class DashboardJPanel extends javax.swing.JPanel {
             }
         });
 
+        patientTable.setFont(new java.awt.Font("Lucida Grande", 0, 13)); // NOI18N
         patientTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -258,10 +260,10 @@ public class DashboardJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel4.setText("Name:");
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel7.setText("Age:");
 
         patientAge.setEditable(false);
@@ -270,40 +272,40 @@ public class DashboardJPanel extends javax.swing.JPanel {
         patientGender.setEditable(false);
         patientGender.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel5.setText("Gender:");
 
         email.setEditable(false);
         email.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel6.setText("Email:");
 
         phone.setEditable(false);
         phone.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel8.setText("Phone:");
 
         patientBloodGroup.setEditable(false);
         patientBloodGroup.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel9.setText("Blood Group:");
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel10.setText("Address:");
 
         address.setEditable(false);
         address.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel11.setText("Weight:");
 
         patientHeight.setEditable(false);
         patientHeight.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel12.setText("Height:");
 
         deleteBtn.setBackground(new java.awt.Color(209, 26, 42));
@@ -332,7 +334,7 @@ public class DashboardJPanel extends javax.swing.JPanel {
         lastVisit.setEditable(false);
         lastVisit.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel15.setText("Last Visit:");
 
         javax.swing.GroupLayout patientBasedLayout = new javax.swing.GroupLayout(patientBased);
@@ -341,43 +343,30 @@ public class DashboardJPanel extends javax.swing.JPanel {
             patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, patientBasedLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jSeparator2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1)
-                .addGap(27, 27, 27))
-            .addGroup(patientBasedLayout.createSequentialGroup()
-                .addGroup(patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(patientBasedLayout.createSequentialGroup()
-                        .addGap(49, 49, 49)
+                        .addGap(23, 23, 23)
                         .addGroup(patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(patientBasedLayout.createSequentialGroup()
+                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(37, 37, 37))
+                            .addGroup(patientBasedLayout.createSequentialGroup()
+                                .addGroup(patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, patientBasedLayout.createSequentialGroup()
                                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(384, 384, 384))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addGroup(patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(address, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(patientBasedLayout.createSequentialGroup()
                                 .addGroup(patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(address)
-                                    .addGroup(patientBasedLayout.createSequentialGroup()
-                                        .addComponent(email)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(phone, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, patientBasedLayout.createSequentialGroup()
-                                        .addComponent(lastVisit, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(patientGender, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(patientName, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(18, 18, 18)
+                                    .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lastVisit, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(147, 147, 147))
+                            .addComponent(patientName, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -399,19 +388,41 @@ public class DashboardJPanel extends javax.swing.JPanel {
                             .addComponent(patientBloodGroup, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(patientAge, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(patientBasedLayout.createSequentialGroup()
-                        .addGap(171, 171, 171)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20)
-                        .addComponent(patientID, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(searchBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(24, 24, 24)
+                        .addComponent(jSeparator2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator1)))
+                .addGap(27, 27, 27))
+            .addGroup(patientBasedLayout.createSequentialGroup()
+                .addGroup(patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(patientBasedLayout.createSequentialGroup()
-                        .addGap(198, 198, 198)
-                        .addComponent(modifyBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(119, 119, 119)
-                        .addComponent(deleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(phone, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(patientBasedLayout.createSequentialGroup()
+                            .addGap(171, 171, 171)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(20, 20, 20)
+                            .addComponent(patientID, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(searchBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(patientBasedLayout.createSequentialGroup()
+                            .addGap(198, 198, 198)
+                            .addComponent(modifyBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(119, 119, 119)
+                            .addComponent(deleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(patientBasedLayout.createSequentialGroup()
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(patientGender, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(187, Short.MAX_VALUE))
         );
+
+        patientBasedLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {deleteBtn, modifyBtn});
+
         patientBasedLayout.setVerticalGroup(
             patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(patientBasedLayout.createSequentialGroup()
@@ -425,25 +436,29 @@ public class DashboardJPanel extends javax.swing.JPanel {
                     .addGroup(patientBasedLayout.createSequentialGroup()
                         .addGroup(patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(patientBasedLayout.createSequentialGroup()
-                                .addGap(37, 37, 37)
+                                .addGap(38, 38, 38)
                                 .addGroup(patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(patientGender, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(lastVisit, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(patientName, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(patientBasedLayout.createSequentialGroup()
+                                .addGroup(patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(patientName, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(patientGender, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(phone, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(phone, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(address, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(address, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(patientBasedLayout.createSequentialGroup()
                         .addGroup(patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(patientAge, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -470,9 +485,11 @@ public class DashboardJPanel extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(patientBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(deleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(modifyBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(76, Short.MAX_VALUE))
+                    .addComponent(modifyBtn))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
+
+        patientBasedLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {deleteBtn, modifyBtn});
 
         dashboardLayerdPane.add(patientBased, "card2");
 
@@ -492,6 +509,7 @@ public class DashboardJPanel extends javax.swing.JPanel {
             }
         });
 
+        communityTable.setFont(new java.awt.Font("Lucida Grande", 0, 13)); // NOI18N
         communityTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
@@ -527,7 +545,7 @@ public class DashboardJPanel extends javax.swing.JPanel {
             communityTable.getColumnModel().getColumn(7).setHeaderValue("Diastolic BP");
         }
 
-        normalCheckBox1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        normalCheckBox1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         normalCheckBox1.setSelected(true);
         normalCheckBox1.setText("Normal");
         normalCheckBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -574,7 +592,7 @@ public class DashboardJPanel extends javax.swing.JPanel {
         modifyPanel.setBackground(new java.awt.Color(255, 255, 255));
         modifyPanel.setPreferredSize(new java.awt.Dimension(700, 590));
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel14.setText("Patient ID:");
 
         patientIDModify.setEditable(false);
@@ -586,30 +604,38 @@ public class DashboardJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel16.setText("Name:");
 
         patientGenderModify.setEditable(false);
 
-        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel18.setText("Gender:");
 
-        jLabel19.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel19.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel19.setText("Email:");
 
-        jLabel20.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel20.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel20.setText("Phone:");
 
-        jLabel22.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel22.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel22.setText("Address:");
 
-        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel23.setText("Weight:");
 
-        jLabel24.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel24.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel24.setText("Height:");
 
-        jLabel25.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel25.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel25.setText("Community:");
 
         submitButton.setBackground(new java.awt.Color(92, 184, 92));
@@ -623,21 +649,23 @@ public class DashboardJPanel extends javax.swing.JPanel {
             }
         });
 
-        zipCodeLabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        zipCodeLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        zipCodeLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         zipCodeLabel.setText("ZipCode:");
 
-        jLabel26.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel26.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel26.setText("City:");
 
         personIdModify.setEditable(false);
 
-        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel17.setText("Person ID:");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 22)); // NOI18N
         jLabel3.setText("MODIFY");
 
-        jLabel21.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        jLabel21.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel21.setText("DETAILS");
 
         javax.swing.GroupLayout modifyPanelLayout = new javax.swing.GroupLayout(modifyPanel);
@@ -664,9 +692,9 @@ public class DashboardJPanel extends javax.swing.JPanel {
                             .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, modifyPanelLayout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addGroup(modifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(modifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(18, 18, 18)
                         .addGroup(modifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(emailModify, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
@@ -685,19 +713,18 @@ public class DashboardJPanel extends javax.swing.JPanel {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, modifyPanelLayout.createSequentialGroup()
                         .addGroup(modifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(modifyPanelLayout.createSequentialGroup()
-                                .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(18, 18, 18))
-                            .addGroup(modifyPanelLayout.createSequentialGroup()
-                                .addComponent(jLabel23)
-                                .addGap(26, 26, 26)))
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jLabel23))
+                            .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
                         .addGroup(modifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(phoneModify, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
                             .addComponent(patientWeightModify)))
                     .addGroup(modifyPanelLayout.createSequentialGroup()
                         .addGroup(modifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel25)
-                            .addComponent(zipCodeLabel))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(zipCodeLabel, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(modifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(communityModify, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
                             .addComponent(zipCodeModify))))
@@ -707,7 +734,7 @@ public class DashboardJPanel extends javax.swing.JPanel {
                 .addComponent(submitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(modifyPanelLayout.createSequentialGroup()
-                .addContainerGap(27, Short.MAX_VALUE)
+                .addContainerGap(23, Short.MAX_VALUE)
                 .addGroup(modifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(modifyPanelLayout.createSequentialGroup()
                         .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -721,7 +748,7 @@ public class DashboardJPanel extends javax.swing.JPanel {
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(8, Short.MAX_VALUE))
         );
         modifyPanelLayout.setVerticalGroup(
             modifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -772,9 +799,10 @@ public class DashboardJPanel extends javax.swing.JPanel {
                 .addGroup(modifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(modifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(cityModify, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(zipCodeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(zipCodeModify, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cityModify, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(modifyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(zipCodeModify, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(zipCodeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(36, 36, 36)
                 .addComponent(submitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(89, 89, 89))
@@ -818,24 +846,33 @@ public class DashboardJPanel extends javax.swing.JPanel {
             personTable.getColumnModel().getColumn(6).setResizable(false);
         }
 
+        jLabel27.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel27.setText("PERSON CATALOG");
+
         javax.swing.GroupLayout personBasedLayout = new javax.swing.GroupLayout(personBased);
         personBased.setLayout(personBasedLayout);
         personBasedLayout.setHorizontalGroup(
             personBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
+            .addGroup(personBasedLayout.createSequentialGroup()
+                .addGap(261, 261, 261)
+                .addComponent(jLabel27)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         personBasedLayout.setVerticalGroup(
             personBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(personBasedLayout.createSequentialGroup()
-                .addGap(73, 73, 73)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, personBasedLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel27)
+                .addGap(45, 45, 45)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(97, Short.MAX_VALUE))
+                .addGap(102, 102, 102))
         );
 
         dashboardLayerdPane.add(personBased, "card2");
 
         personBasedButton.setBackground(new java.awt.Color(255, 255, 255));
-        personBasedButton.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
+        personBasedButton.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         personBasedButton.setText("Person");
         personBasedButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         personBasedButton.addActionListener(new java.awt.event.ActionListener() {
@@ -860,6 +897,9 @@ public class DashboardJPanel extends javax.swing.JPanel {
                 .addComponent(mainMenuBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {communityBasedButton, mainMenuBtn, patientBasedButton, personBasedButton});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -872,6 +912,9 @@ public class DashboardJPanel extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addComponent(dashboardLayerdPane, javax.swing.GroupLayout.PREFERRED_SIZE, 534, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {communityBasedButton, mainMenuBtn, patientBasedButton, personBasedButton});
+
     }// </editor-fold>//GEN-END:initComponents
 
     private void patientBasedButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patientBasedButtonActionPerformed
@@ -1190,6 +1233,7 @@ public class DashboardJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
