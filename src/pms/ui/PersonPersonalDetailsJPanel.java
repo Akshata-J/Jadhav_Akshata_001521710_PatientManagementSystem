@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import pms.model.ManagementSystem;
 import pms.model.Person;
+import pms.utils.Utils;
 
 /**
  *
@@ -282,6 +283,11 @@ public class PersonPersonalDetailsJPanel extends javax.swing.JPanel {
         }catch(Exception e){
             JOptionPane.showMessageDialog(this, "Please provide date in MM/dd/yyyy format!!", "Error", JOptionPane.ERROR_MESSAGE);
             return;
+        }
+        
+        if(Utils.isDateAfterToday(dob)){
+            JOptionPane.showMessageDialog(this, "Please provide correct date of birth!!", "Error", JOptionPane.ERROR_MESSAGE);
+            return;            
         }
         
         newPerson.setDateOfBirth(dob);

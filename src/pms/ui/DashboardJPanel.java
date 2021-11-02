@@ -51,6 +51,10 @@ public class DashboardJPanel extends javax.swing.JPanel {
         displayPanel(dashboardLayerdPane, personBased);
         populatePersonCatalog();
         tableRecordsStatus.setSize(tableRecordsStatus.getPreferredSize());
+        ageGroupTableStatus.setSize(ageGroupTableStatus.getPreferredSize());
+        noPersonTableStatus.setSize(noPersonTableStatus.getPreferredSize());
+        noPatientTableStatus.setSize(noPatientTableStatus.getPreferredSize());
+        noEncounterTableStatus.setSize(noEncounterTableStatus.getPreferredSize());
     }
 
     public void displayPanel(JLayeredPane lpane, JPanel panel) {
@@ -69,8 +73,11 @@ public class DashboardJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ageGroupRadioButton = new javax.swing.ButtonGroup();
         tableRecordsStatus = new javax.swing.JLabel();
+        ageGroupTableStatus = new javax.swing.JLabel();
+        noPatientTableStatus = new javax.swing.JLabel();
+        noPersonTableStatus = new javax.swing.JLabel();
+        noEncounterTableStatus = new javax.swing.JLabel();
         personBasedButton = new javax.swing.JButton();
         patientBasedButton = new javax.swing.JButton();
         communityBasedButton = new javax.swing.JButton();
@@ -158,16 +165,21 @@ public class DashboardJPanel extends javax.swing.JPanel {
         jScrollPane3 = new javax.swing.JScrollPane();
         personTable = new javax.swing.JTable();
         jLabel27 = new javax.swing.JLabel();
-        backupCommunityBased = new javax.swing.JPanel();
-        jLabel28 = new javax.swing.JLabel();
-        searchBtn2 = new javax.swing.JButton();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        communityTable1 = new javax.swing.JTable();
-        communityComboBox1 = new javax.swing.JComboBox<>();
-        normalCheckBox2 = new javax.swing.JCheckBox();
 
         tableRecordsStatus.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         tableRecordsStatus.setText("No records available");
+
+        ageGroupTableStatus.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        ageGroupTableStatus.setText("Please select an age group!");
+
+        noPatientTableStatus.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        noPatientTableStatus.setText("No patient record available");
+
+        noPersonTableStatus.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        noPersonTableStatus.setText("No person record available");
+
+        noEncounterTableStatus.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        noEncounterTableStatus.setText("No encounter record available");
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(700, 590));
@@ -269,7 +281,7 @@ public class DashboardJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(patientTable);
         if (patientTable.getColumnModel().getColumnCount() > 0) {
             patientTable.getColumnModel().getColumn(0).setResizable(false);
-            patientTable.getColumnModel().getColumn(0).setPreferredWidth(50);
+            patientTable.getColumnModel().getColumn(0).setPreferredWidth(80);
             patientTable.getColumnModel().getColumn(1).setResizable(false);
             patientTable.getColumnModel().getColumn(1).setPreferredWidth(50);
             patientTable.getColumnModel().getColumn(2).setResizable(false);
@@ -559,12 +571,18 @@ public class DashboardJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        communityTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                communityTableMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(communityTable);
         if (communityTable.getColumnModel().getColumnCount() > 0) {
             communityTable.getColumnModel().getColumn(0).setResizable(false);
             communityTable.getColumnModel().getColumn(1).setResizable(false);
+            communityTable.getColumnModel().getColumn(1).setPreferredWidth(100);
             communityTable.getColumnModel().getColumn(2).setResizable(false);
-            communityTable.getColumnModel().getColumn(2).setPreferredWidth(35);
+            communityTable.getColumnModel().getColumn(2).setPreferredWidth(30);
             communityTable.getColumnModel().getColumn(3).setResizable(false);
             communityTable.getColumnModel().getColumn(4).setResizable(false);
             communityTable.getColumnModel().getColumn(4).setPreferredWidth(40);
@@ -572,7 +590,6 @@ public class DashboardJPanel extends javax.swing.JPanel {
             communityTable.getColumnModel().getColumn(5).setPreferredWidth(80);
             communityTable.getColumnModel().getColumn(6).setResizable(false);
             communityTable.getColumnModel().getColumn(7).setResizable(false);
-            communityTable.getColumnModel().getColumn(7).setHeaderValue("Diastolic BP");
         }
 
         normalCheckBox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -599,7 +616,6 @@ public class DashboardJPanel extends javax.swing.JPanel {
         jLabel31.setText("Vital Status:");
 
         below18.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        below18.setSelected(true);
         below18.setText("Below 18");
         below18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -608,7 +624,6 @@ public class DashboardJPanel extends javax.swing.JPanel {
         });
 
         between18_60.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        between18_60.setSelected(true);
         between18_60.setText("Between 18 - 60");
         between18_60.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -617,7 +632,6 @@ public class DashboardJPanel extends javax.swing.JPanel {
         });
 
         above60.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        above60.setSelected(true);
         above60.setText("Above 60");
         above60.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -629,7 +643,7 @@ public class DashboardJPanel extends javax.swing.JPanel {
         communityBased.setLayout(communityBasedLayout);
         communityBasedLayout.setHorizontalGroup(
             communityBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
+            .addComponent(jScrollPane2)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, communityBasedLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(communityBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -676,9 +690,9 @@ public class DashboardJPanel extends javax.swing.JPanel {
                     .addComponent(below18, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(between18_60, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(above60, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(56, 56, 56))
+                .addGap(31, 31, 31)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         dashboardLayerdPane.add(communityBased, "card2");
@@ -926,13 +940,19 @@ public class DashboardJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        personTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                personTableMouseClicked(evt);
+            }
+        });
         jScrollPane3.setViewportView(personTable);
         if (personTable.getColumnModel().getColumnCount() > 0) {
             personTable.getColumnModel().getColumn(0).setResizable(false);
             personTable.getColumnModel().getColumn(1).setResizable(false);
             personTable.getColumnModel().getColumn(2).setResizable(false);
+            personTable.getColumnModel().getColumn(2).setPreferredWidth(100);
             personTable.getColumnModel().getColumn(3).setResizable(false);
-            personTable.getColumnModel().getColumn(3).setPreferredWidth(35);
+            personTable.getColumnModel().getColumn(3).setPreferredWidth(30);
             personTable.getColumnModel().getColumn(4).setResizable(false);
             personTable.getColumnModel().getColumn(4).setPreferredWidth(40);
             personTable.getColumnModel().getColumn(5).setResizable(false);
@@ -964,102 +984,6 @@ public class DashboardJPanel extends javax.swing.JPanel {
         );
 
         dashboardLayerdPane.add(personBased, "card2");
-
-        backupCommunityBased.setBackground(new java.awt.Color(255, 255, 255));
-        backupCommunityBased.setPreferredSize(new java.awt.Dimension(700, 590));
-
-        jLabel28.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel28.setText("Community:");
-
-        searchBtn2.setBackground(new java.awt.Color(33, 150, 243));
-        searchBtn2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        searchBtn2.setForeground(new java.awt.Color(255, 255, 255));
-        searchBtn2.setText("Search");
-        searchBtn2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                searchBtn2ActionPerformed(evt);
-            }
-        });
-
-        communityTable1.setFont(new java.awt.Font("Lucida Grande", 0, 13)); // NOI18N
-        communityTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "ID", "Name", "Age", "Heart Rate", "O2 %", "Temperature", "Systolic BP", "Diastolic BP"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, true, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane4.setViewportView(communityTable1);
-        if (communityTable1.getColumnModel().getColumnCount() > 0) {
-            communityTable1.getColumnModel().getColumn(0).setResizable(false);
-            communityTable1.getColumnModel().getColumn(1).setResizable(false);
-            communityTable1.getColumnModel().getColumn(2).setResizable(false);
-            communityTable1.getColumnModel().getColumn(2).setPreferredWidth(35);
-            communityTable1.getColumnModel().getColumn(3).setResizable(false);
-            communityTable1.getColumnModel().getColumn(4).setResizable(false);
-            communityTable1.getColumnModel().getColumn(4).setPreferredWidth(40);
-            communityTable1.getColumnModel().getColumn(5).setResizable(false);
-            communityTable1.getColumnModel().getColumn(5).setPreferredWidth(80);
-            communityTable1.getColumnModel().getColumn(6).setResizable(false);
-            communityTable1.getColumnModel().getColumn(7).setResizable(false);
-            communityTable1.getColumnModel().getColumn(7).setHeaderValue("Diastolic BP");
-        }
-
-        normalCheckBox2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        normalCheckBox2.setSelected(true);
-        normalCheckBox2.setText("Normal");
-        normalCheckBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                normalCheckBox2ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout backupCommunityBasedLayout = new javax.swing.GroupLayout(backupCommunityBased);
-        backupCommunityBased.setLayout(backupCommunityBasedLayout);
-        backupCommunityBasedLayout.setHorizontalGroup(
-            backupCommunityBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
-            .addGroup(backupCommunityBasedLayout.createSequentialGroup()
-                .addGap(319, 319, 319)
-                .addComponent(normalCheckBox2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backupCommunityBasedLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(communityComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(searchBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(174, 174, 174))
-        );
-        backupCommunityBasedLayout.setVerticalGroup(
-            backupCommunityBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(backupCommunityBasedLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(backupCommunityBasedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(searchBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(communityComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39)
-                .addComponent(normalCheckBox2)
-                .addGap(43, 43, 43)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(56, 56, 56))
-        );
-
-        dashboardLayerdPane.add(backupCommunityBased, "card2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -1100,10 +1024,16 @@ public class DashboardJPanel extends javax.swing.JPanel {
     private void patientBasedButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patientBasedButtonActionPerformed
         emptyTable(communityTable);
         emptyTable(patientTable);
+        resetPatientView();
         displayPanel(dashboardLayerdPane, patientBased);
     }//GEN-LAST:event_patientBasedButtonActionPerformed
 
     private void communityBasedButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_communityBasedButtonActionPerformed
+        
+        
+        below18.setSelected(false);
+        between18_60.setSelected(false);
+        above60.setSelected(false);
         emptyTable(communityTable);
         emptyTable(patientTable);
         cityComboBox.removeAllItems();
@@ -1176,10 +1106,20 @@ public class DashboardJPanel extends javax.swing.JPanel {
             temp[2] = currentPatient.getEncounterHistory().getEncounters().get(i).getOxygenLevel();
             temp[3] = currentPatient.getEncounterHistory().getEncounters().get(i).getTemperature();
             temp[4] = currentPatient.getEncounterHistory().getEncounters().get(i).gethBloodPressure();
+//            System.out.println(temp[4]);
             temp[5] = currentPatient.getEncounterHistory().getEncounters().get(i).getlBloodPressure();
+//            System.out.println(temp[5]);
             data.add(temp);
         }
+        
+        
+        patientTable.remove(noEncounterTableStatus);
+        patientTable.setFillsViewportHeight(false);
         populateTable(patientTable, data);
+        if (((DefaultTableModel) patientTable.getModel()).getRowCount() == 0) {
+            patientTable.add(noEncounterTableStatus);
+            patientTable.setFillsViewportHeight(true);
+        }
     }//GEN-LAST:event_searchBtnActionPerformed
 
     private void searchBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBtn1ActionPerformed
@@ -1380,14 +1320,6 @@ public class DashboardJPanel extends javax.swing.JPanel {
         populatePersonCatalog();
     }//GEN-LAST:event_personBasedButtonActionPerformed
 
-    private void searchBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBtn2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_searchBtn2ActionPerformed
-
-    private void normalCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_normalCheckBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_normalCheckBox2ActionPerformed
-
     private void below18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_below18ActionPerformed
         emptyTable(communityTable);
         populateCommunityTable();
@@ -1406,7 +1338,7 @@ public class DashboardJPanel extends javax.swing.JPanel {
     private void cityComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cityComboBoxActionPerformed
         String city = (String) cityComboBox.getSelectedItem();
         communityComboBox.removeAllItems();
-        if(city == null){
+        if (city == null) {
             return;
         }
         if (city.equalsIgnoreCase("Select")) {
@@ -1428,13 +1360,29 @@ public class DashboardJPanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_cityComboBoxActionPerformed
 
+    private void communityTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_communityTableMouseClicked
+        int row = communityTable.rowAtPoint(evt.getPoint());
+        int id = (int) communityTable.getModel().getValueAt(row, 0);
+        Utils.copyToClipboard(id);
+    }//GEN-LAST:event_communityTableMouseClicked
+
+    private void personTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_personTableMouseClicked
+        int row = personTable.rowAtPoint(evt.getPoint());
+        if (!personTable.getModel().getValueAt(row, 1).equals("-")) {
+            int id = (int) personTable.getModel().getValueAt(row, 1);
+            Utils.copyToClipboard(id);
+            return;
+        }
+        int id = (int) personTable.getModel().getValueAt(row, 0);
+        Utils.copyToClipboard(id);
+    }//GEN-LAST:event_personTableMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox above60;
     private javax.swing.JTextField address;
     private javax.swing.JTextField addressModify;
-    private javax.swing.ButtonGroup ageGroupRadioButton;
-    private javax.swing.JPanel backupCommunityBased;
+    private javax.swing.JLabel ageGroupTableStatus;
     private javax.swing.JCheckBox below18;
     private javax.swing.JCheckBox between18_60;
     private javax.swing.JComboBox<String> cityComboBox;
@@ -1442,10 +1390,8 @@ public class DashboardJPanel extends javax.swing.JPanel {
     private javax.swing.JPanel communityBased;
     private javax.swing.JButton communityBasedButton;
     private javax.swing.JComboBox<String> communityComboBox;
-    private javax.swing.JComboBox<String> communityComboBox1;
     private javax.swing.JTextField communityModify;
     private javax.swing.JTable communityTable;
-    private javax.swing.JTable communityTable1;
     private javax.swing.JLayeredPane dashboardLayerdPane;
     private javax.swing.JButton deleteBtn;
     private javax.swing.JTextField email;
@@ -1470,7 +1416,6 @@ public class DashboardJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
@@ -1485,7 +1430,6 @@ public class DashboardJPanel extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
@@ -1496,8 +1440,10 @@ public class DashboardJPanel extends javax.swing.JPanel {
     private javax.swing.JButton mainMenuBtn;
     private javax.swing.JButton modifyBtn;
     private javax.swing.JPanel modifyPanel;
+    private javax.swing.JLabel noEncounterTableStatus;
+    private javax.swing.JLabel noPatientTableStatus;
+    private javax.swing.JLabel noPersonTableStatus;
     private javax.swing.JCheckBox normalCheckBox;
-    private javax.swing.JCheckBox normalCheckBox2;
     private javax.swing.JTextField patientAge;
     private javax.swing.JPanel patientBased;
     private javax.swing.JButton patientBasedButton;
@@ -1521,7 +1467,6 @@ public class DashboardJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField phoneModify;
     private javax.swing.JButton searchBtn;
     private javax.swing.JButton searchBtn1;
-    private javax.swing.JButton searchBtn2;
     private javax.swing.JButton submitButton;
     private javax.swing.JLabel tableRecordsStatus;
     private javax.swing.JLabel zipCodeLabel;
@@ -1531,37 +1476,50 @@ public class DashboardJPanel extends javax.swing.JPanel {
     HashMap<String, List<Patient>> patientsAbNormal;
     int currentModifyPatientID;
 
-    private void populateCommunityTable(){
-        if(patientsNormal == null){
+    private void populateCommunityTable() {
+        if (patientsNormal == null) {
             return;
         }
-        if(patientsAbNormal == null){
+        if (patientsAbNormal == null) {
             return;
         }
-        communityTable.remove(tableRecordsStatus);
-            communityTable.setFillsViewportHeight(false);
+        communityTable.remove(noPatientTableStatus);
+        communityTable.setFillsViewportHeight(false);
+        communityTable.remove(ageGroupTableStatus);
+        communityTable.setFillsViewportHeight(false);
         if (!normalCheckBox.isSelected()) {
-            if(below18.isSelected())
-            populateCommunityTableModel(communityTable, patientsNormal.get("below"));
-            if(above60.isSelected())
-            populateCommunityTableModel(communityTable, patientsNormal.get("above"));
-            if(between18_60.isSelected())
-            populateCommunityTableModel(communityTable, patientsNormal.get("between"));
+            if (below18.isSelected()) {
+                populateCommunityTableModel(communityTable, patientsNormal.get("below"));
+            }
+            if (between18_60.isSelected()) {
+                populateCommunityTableModel(communityTable, patientsNormal.get("between"));
+            }
+            if (above60.isSelected()) {
+                populateCommunityTableModel(communityTable, patientsNormal.get("above"));
+            }
         } else {
-            if(below18.isSelected())
-            populateCommunityTableModel(communityTable, patientsAbNormal.get("below"));
-            if(above60.isSelected())
-            populateCommunityTableModel(communityTable, patientsAbNormal.get("above"));
-            if(between18_60.isSelected())
-            populateCommunityTableModel(communityTable, patientsAbNormal.get("between"));
+            if (below18.isSelected()) {
+                populateCommunityTableModel(communityTable, patientsAbNormal.get("below"));
+            }
+            if (between18_60.isSelected()) {
+                populateCommunityTableModel(communityTable, patientsAbNormal.get("between"));
+            }
+            if (above60.isSelected()) {
+                populateCommunityTableModel(communityTable, patientsAbNormal.get("above"));
+            }
 
         }
         if (((DefaultTableModel) communityTable.getModel()).getRowCount() == 0) {
-            communityTable.add(tableRecordsStatus);
+            communityTable.add(noPatientTableStatus);
+            communityTable.setFillsViewportHeight(true);
+        }
+        if (!below18.isSelected() && !between18_60.isSelected() && !above60.isSelected()) {
+            communityTable.remove(noPatientTableStatus);
+            communityTable.add(ageGroupTableStatus);
             communityTable.setFillsViewportHeight(true);
         }
     }
-    
+
     private void emptyPersonBased() {
         patientName.setText("");
         patientGender.setText("");
@@ -1587,10 +1545,10 @@ public class DashboardJPanel extends javax.swing.JPanel {
             model.addRow(c);
         }
         table.setModel(model);
-        if (table.getRowCount() == 0) {
-            table.add(tableRecordsStatus);
-            table.setFillsViewportHeight(true);
-        }
+//        if (table.getRowCount() == 0) {
+//            table.add(tableRecordsStatus);
+//            table.setFillsViewportHeight(true);
+//        }
     }
 
     private void populateCommunityTableModel(JTable table, List<Patient> patients) {
@@ -1632,6 +1590,8 @@ public class DashboardJPanel extends javax.swing.JPanel {
     public void populatePersonCatalog() {
 
         JTable table = personTable;
+        table.remove(noPersonTableStatus);
+        table.setFillsViewportHeight(false);
 
         int rowCount = table.getRowCount();
         DefaultTableModel model = (DefaultTableModel) table.getModel();
@@ -1657,7 +1617,7 @@ public class DashboardJPanel extends javax.swing.JPanel {
                 c[6] = "-";
 
             }
-            
+
             c[2] = p.getName();
             c[3] = Utils.ageCalculator(p.getDateOfBirth());
             c[4] = p.getGender();
@@ -1670,6 +1630,12 @@ public class DashboardJPanel extends javax.swing.JPanel {
             table.add(tableRecordsStatus);
             table.setFillsViewportHeight(true);
         }
+
+        if (model.getRowCount() == 0) {
+            table.add(noPersonTableStatus);
+            table.setFillsViewportHeight(true);
+        }
+
     }
 
 }

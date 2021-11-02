@@ -48,7 +48,7 @@ public class Encounter extends VitalSigns{
         if(lBloodPressure>90 || lBloodPressure<60){
             normal = false;
         }
-        super.sethBloodPressure(lBloodPressure);
+        super.setlBloodPressure(lBloodPressure);
     }
 
     public Date getVisitDate() {

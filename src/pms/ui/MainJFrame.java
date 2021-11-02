@@ -228,7 +228,7 @@ public class MainJFrame extends javax.swing.JFrame {
             p = new Person("Peter Parker","06/12/2000","Male","O+","spidey@gmail.com",5216782450L,175,68,76,"NYC","New York",01235);
             system.addPerson(p);
             patient = Utils.personToPatient(p);
-            e=new Encounter(new Date(2019, 8, 8, 10, 30), 99, 110, 98, 100, 80);
+            e=new Encounter(Utils.dateTime(2019, 8, 8, 10, 30), 99, 110, 98, 100, 80);
             patient.getEncounterHistory().getEncounters().add(e);
             e=new Encounter(new Date(), 99, 110, 98, 100, 80); //latest entry, date
             patient.getEncounterHistory().getEncounters().add(e);
@@ -237,7 +237,7 @@ public class MainJFrame extends javax.swing.JFrame {
             p = new Person("Pepper Potts","03/28/1975","Female","B-","pepper@gmail.com",6735678222L,183,60,101,"Lexington","Boston",02215);
             system.addPerson(p);
             patient = Utils.personToPatient(p);
-            e=new Encounter(new Date(2019, 8, 8, 10, 30), 99, 110, 98, 100, 80);
+            e=new Encounter(Utils.dateTime(2019, 8, 8, 10, 30), 99, 110, 98, 100, 80);
             patient.getEncounterHistory().getEncounters().add(e);
             e=new Encounter(new Date(), 99, 110, 98, 100, 80); //latest entry, date
             patient.getEncounterHistory().getEncounters().add(e);
@@ -246,7 +246,7 @@ public class MainJFrame extends javax.swing.JFrame {
             p = new Person("Carol Danvers","03/28/1965","Female","O+","cptM@gmail.com",8786543245L,175,70,1,"NYC","New York",05432);
             system.addPerson(p);
             patient = Utils.personToPatient(p);
-            e=new Encounter(new Date(2019, 8, 8, 10, 30), 99, 110, 98, 100, 80);
+            e=new Encounter(Utils.dateTime(2019, 8, 8, 10, 30), 99, 110, 98, 100, 80);
             patient.getEncounterHistory().getEncounters().add(e);
             e=new Encounter(new Date(), 99, 110, 98, 100, 80); //latest entry, date
             patient.getEncounterHistory().getEncounters().add(e);

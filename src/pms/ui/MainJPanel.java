@@ -80,7 +80,7 @@ public class MainJPanel extends javax.swing.JPanel {
         });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel2.setText("Not a Patient?");
+        jLabel2.setText("Not Registered?");
 
         dashBoardBtn.setBackground(new java.awt.Color(255, 255, 255));
         dashBoardBtn.setFont(new java.awt.Font("Cambria", 1, 16)); // NOI18N
@@ -158,6 +158,7 @@ public class MainJPanel extends javax.swing.JPanel {
             if(system.getPatientDirectory().getPersonIDs().contains(pID)){
                 int patientId = system.getPatientDirectory().getPatientId(pID);
                 patient = system.getPatientDirectory().getPatient(patientId);
+                //JOptionPane.showMessageDialog(this, "Next time!! Please use patient ID:"+patientId+ ".", "Info",JOptionPane.INFORMATION_MESSAGE);
             }
             else if(!system.getPersonDirectory().getPersonIds().contains(pID)){
                 JOptionPane.showMessageDialog(this, "Person ID doesn't exist!", "Error",JOptionPane.ERROR_MESSAGE);

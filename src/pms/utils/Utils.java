@@ -8,12 +8,17 @@ package pms.utils;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import pms.model.Patient;
 import pms.model.Person;
 
@@ -66,5 +71,20 @@ public class Utils {
         StringSelection selection = new StringSelection(String.valueOf(s));
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard.setContents(selection, selection);
+    }
+    
+    public static Date dateTime(int years, int month, int day, int hour, int minute){
+        try {
+            SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy HH:mm");
+            format.setLenient(false);
+            return format.parse(month+"/"+day+"/"+years+" "+hour+":"+minute);
+        } catch (ParseException ex) {
+            Logger.getLogger(Utils.class.getName()).log(Level.SEVERE, null, ex);
+            return new Date();
+        }
+    }
+    
+    public static boolean isDateAfterToday(Date date){
+        return date.after(new Date());
     }
 }
