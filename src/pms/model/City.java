@@ -53,6 +53,4 @@ public class City {
         this.name = name;
     }
     
-    
-    
 }

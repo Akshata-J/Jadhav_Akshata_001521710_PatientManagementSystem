@@ -40,10 +40,6 @@ public class MainJFrame extends javax.swing.JFrame {
         setResizable(false);
     }
 
-    
-    
-    
-    
     public void displayPanel(JPanel panel) {
         mainLayeredPane.removeAll();
         mainLayeredPane.add(panel);
@@ -206,18 +202,48 @@ public class MainJFrame extends javax.swing.JFrame {
         Encounter e = null;
         try {
             
-            p = new Person("SH","10/10/1995","Male","A-","srh@gmail.com",9999999999L,183,80,46,"Boylston","Boston",2215);
+            p = new Person("Peggy Carter","09/05/1955","Female","A-","pgc@gmail.com",9345654332L,165,60,143,"Orange County","Los Angeles",07652);
             system.addPerson(p);
             
+            p = new Person("Steve Rogers","05/24/1955","Male","O+","capA@gmail.com",6785431288L,190,90,56,"Orange County","Los Angeles",07652);
+            system.addPerson(p);
             
-            p = new Person("AK","10/10/1995","Female","A+","AK@gmail.com",9999999999L,183,80,46,"Boylston","Boston",2215);
+            p = new Person("Tony Stark","04/05/1970","Male","O-","ironM@gmail.com",7896578777L,183,80,101,"Lexington","Boston",02115);
+            system.addPerson(p);
+            
+            p = new Person("Natasha Romanoff","10/10/1985","Female","AB+","blackwidow@gmail.com",6789876092L,180,55,9,"Manhattan","New York",05634);
             system.addPerson(p);
             patient = Utils.personToPatient(p);
             e=new Encounter(new Date(), 100, 100, 100, 100, 100);
             patient.getEncounterHistory().getEncounters().add(e);
             system.addPatient(patient);
             
-            p = new Person("CH","01/01/1995","Male","O+","CH@gmail.com",9999999888L,183,80,46,"Boylston","Boston",2215);
+            p = new Person("Bruce Banner","05/01/1970","Male","B+","hulk@gmail.com",9763421678L,180,75,46,"Manhattan","New York",05634);
+            system.addPerson(p);
+            patient = Utils.personToPatient(p);
+            e=new Encounter(new Date(), 100, 100, 100, 100, 100);
+            patient.getEncounterHistory().getEncounters().add(e);
+            system.addPatient(patient);
+            
+            p = new Person("Peter Parker","06/12/2000","Male","O+","spidey@gmail.com",5216782450L,175,68,76,"NYC","New York",01235);
+            system.addPerson(p);
+            patient = Utils.personToPatient(p);
+            e=new Encounter(new Date(2019, 8, 8, 10, 30), 99, 110, 98, 100, 80);
+            patient.getEncounterHistory().getEncounters().add(e);
+            e=new Encounter(new Date(), 99, 110, 98, 100, 80); //latest entry, date
+            patient.getEncounterHistory().getEncounters().add(e);
+            system.addPatient(patient);
+            
+            p = new Person("Pepper Potts","03/28/1975","Female","B-","pepper@gmail.com",6735678222L,183,60,101,"Lexington","Boston",02215);
+            system.addPerson(p);
+            patient = Utils.personToPatient(p);
+            e=new Encounter(new Date(2019, 8, 8, 10, 30), 99, 110, 98, 100, 80);
+            patient.getEncounterHistory().getEncounters().add(e);
+            e=new Encounter(new Date(), 99, 110, 98, 100, 80); //latest entry, date
+            patient.getEncounterHistory().getEncounters().add(e);
+            system.addPatient(patient);
+            
+            p = new Person("Carol Danvers","03/28/1965","Female","O+","cptM@gmail.com",8786543245L,175,70,1,"NYC","New York",05432);
             system.addPerson(p);
             patient = Utils.personToPatient(p);
             e=new Encounter(new Date(2019, 8, 8, 10, 30), 99, 110, 98, 100, 80);

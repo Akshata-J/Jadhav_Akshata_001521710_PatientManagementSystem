@@ -27,8 +27,13 @@ public class Encounter extends VitalSigns{
     public Encounter(Date visitDate, int hBloodPressure, int lBloodPressure, int heartRate, int oxygenLevel, float temperature) {
         super(hBloodPressure, lBloodPressure, heartRate, oxygenLevel, temperature);
         this.visitDate = visitDate;
+        if(hBloodPressure>140 || hBloodPressure<100){
+            normal = false;
+        }
+        if(lBloodPressure>90 || lBloodPressure<60){
+            normal = false;
+        }
     }
-    
     
     @Override
     public void sethBloodPressure(int hBloodPressure) {
@@ -66,11 +71,5 @@ public class Encounter extends VitalSigns{
     public String toString() {
         return "Encounter{" + "visitDate=" + visitDate + ", normal=" + normal + '}';
     }
-
-   
-
-    
-    
-    
 
 }

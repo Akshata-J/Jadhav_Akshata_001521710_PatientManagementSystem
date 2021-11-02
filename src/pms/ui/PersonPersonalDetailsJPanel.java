@@ -304,7 +304,6 @@ public class PersonPersonalDetailsJPanel extends javax.swing.JPanel {
         
         newPerson.setGender(genderRadioButtonGroup.getSelection().getActionCommand());
         
-        
         emptyForm();
         PersonCommunicationDetailsJPanel pcdjp = new PersonCommunicationDetailsJPanel(layeredPane, system, newPerson);
         displayPanel(pcdjp);

@@ -19,7 +19,6 @@ public class VitalSigns {
 
     public VitalSigns() {
     }
-    
 
     public VitalSigns(int hBloodPressure, int lBloodPressure, int heartRate, int oxygenLevel, float temperature) {
         this.hBloodPressure = hBloodPressure;
@@ -74,8 +73,5 @@ public class VitalSigns {
     public String toString() {
         return "VitalSigns{" + "hBloodPressure=" + hBloodPressure + ", lBloodPressure=" + lBloodPressure + ", heartRate=" + heartRate + ", oxygenLevel=" + oxygenLevel + ", temperature=" + temperature + '}';
     }
-
-   
-    
-    
+  
 }
